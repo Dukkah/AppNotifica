@@ -11,21 +11,25 @@ import UIKit
 class RegisterView: UIView {
     //MARK: - Initialize
         override init(frame: CGRect) {
+          
             super.init(frame: frame)
+      
             self.backgroundColor = .viewBackGroundColor
             setupVisualElements()
             
         }
     
-
+    //MARK: - Initialize
+    var onLoginTap: (()->Void)?
+     
     var imageLabel = LabelDefault(text: "Entre com seu email e sua senha para se registrar", font: UIFont.systemFont(ofSize: 27, weight: .regular))
     
     var emailTextField = TextFieldDefault (placeholder: "E-mail")
-  
+    
     var senhaTextField = TextFieldDefault (placeholder: "Senha")
     
     var confirmaSenhaTextField = TextFieldDefault (placeholder: "Confirme sua senha")
-
+    
     var buttonRegistrar = ButtonDefault(botao: "REGISTRAR")
     
     var buttonLogar = ButtonDefault(botao: "LOGAR")
@@ -42,7 +46,8 @@ class RegisterView: UIView {
         self.addSubview(buttonRegistrar)
         self.addSubview(buttonLogar)
         
-       
+        buttonLogar.addTarget(self, action: #selector(loginTap), for: .touchUpInside)
+        
         
         NSLayoutConstraint.activate([
         
@@ -92,6 +97,11 @@ class RegisterView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Actions
+    @objc
+    private func loginTap(){
+        onLoginTap?()
+    }
     
     
 }
