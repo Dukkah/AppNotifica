@@ -11,71 +11,29 @@ import UIKit
 class LoginView: UIView {
     //MARK: - Initialize
         override init(frame: CGRect) {
-          
+           
             super.init(frame: frame)
             
-            self.backgroundColor = .white
+            self.backgroundColor = .viewBackGroundColor
             setupVisualElements()
             
         }
     
-    var imageLogin: UIImageView = {
-        let imagem = UIImageView ()
-        imagem.image = UIImage(named: "ImageLogin")
-        imagem.contentMode = .scaleAspectFit
-        imagem.translatesAutoresizingMaskIntoConstraints = false
-        
-        return imagem
-    }()
+  //MARK: -  Clouseres
+  var onRegisterTap: (() -> Void)?
     
-    var imageLabel: UILabel = {
-        let label = UILabel ()
-        label.textColor = UIColor(red: 0.541, green: 0.541, blue: 0.557, alpha: 1)
-        label.font = UIFont(name: "SFProDisplay-Light", size: 16)
-        label.text = "Registre e gerencie as ocorrências do seu IF"
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    var imageLogin = ImageDefault(image: "ImageLogin")
+       
+    var imageLabel = LabelDefault(text: "Registre e gerencie as ocorrências do seu IF", font: UIFont.systemFont(ofSize: 17, weight: .regular))
     
-    var emailTextField: UITextField = {
-        let textField = UITextField ()
-        textField.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
-        textField.placeholder = "E-mail"
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        
-        return textField
-    }()
+    var emailTextField = TextFieldDefault (placeholder: "E-mail")
     
-    var senhaTextField: UITextField = {
-        let textField = UITextField ()
-        textField.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
-        textField.placeholder = "Senha"
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        
-        return textField
-    }()
+    var senhaTextField = TextFieldDefault (placeholder: "Senha")
     
-    var buttonLogar: UIButton = {
-        let button = UIButton ()
-        button.setTitle("LOGAR", for: .normal)
-        button.layer.backgroundColor = UIColor(red: 0.369, green: 0.639, blue: 0.639, alpha: 1).cgColor
-        button.layer.cornerRadius = 14
-        button.translatesAutoresizingMaskIntoConstraints = false
+    var buttonLogar = ButtonDefault(botao: "LOGAR")
+  
+    var buttonRegistrar = ButtonDefault(botao: "REGISTRAR")
         
-        return button
-    }()
-    
-    var buttonRegistrar: UIButton = {
-        let button = UIButton ()
-        button.setTitle("REGIStRAR", for: .normal)
-        button.layer.backgroundColor = UIColor(red: 0.369, green: 0.639, blue: 0.639, alpha: 1).cgColor
-        button.layer.cornerRadius = 14
-        button.translatesAutoresizingMaskIntoConstraints = false
-        
-        return button
-    }()
-    
     
     func setupVisualElements() {
         self.addSubview(imageLogin)
@@ -84,6 +42,8 @@ class LoginView: UIView {
         self.addSubview(senhaTextField)
         self.addSubview(buttonLogar)
         self.addSubview(buttonRegistrar)
+        
+        buttonRegistrar.addTarget(self, action: #selector(registerTap), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
         
@@ -129,4 +89,9 @@ class LoginView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Actions
+    @objc
+    private func registerTap(){
+        onRegisterTap?()
+    }
 }
