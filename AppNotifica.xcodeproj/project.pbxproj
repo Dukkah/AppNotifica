@@ -33,6 +33,7 @@
 		A4FEA2BF2A447B8200517598 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FEA2BE2A447B8200517598 /* HomeViewController.swift */; };
 		A4FEA2C12A447BCA00517598 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FEA2C02A447BCA00517598 /* HomeCoordinator.swift */; };
 		A4FEA2C32A447E6100517598 /* ViewControllerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FEA2C22A447E6100517598 /* ViewControllerDefault.swift */; };
+		A4FEA2C52A44863200517598 /* ViewDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FEA2C42A44863200517598 /* ViewDefault.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		A4FEA2BE2A447B8200517598 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A4FEA2C02A447BCA00517598 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		A4FEA2C22A447E6100517598 /* ViewControllerDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDefault.swift; sourceTree = "<group>"; };
+		A4FEA2C42A44863200517598 /* ViewDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDefault.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 				A4FEA2AC2A41DDE300517598 /* LabelDefault.swift */,
 				A4FEA2AF2A41DE0700517598 /* TextFieldDefault.swift */,
 				A4FEA2C22A447E6100517598 /* ViewControllerDefault.swift */,
+				A4FEA2C42A44863200517598 /* ViewDefault.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				41239E9528F840EB00D92C31 /* AppNotifica.xcdatamodeld in Sources */,
 				A4FEA2992A41D3B800517598 /* LoginView.swift in Sources */,
 				41239E8D28F840EA00D92C31 /* SceneDelegate.swift in Sources */,
+				A4FEA2C52A44863200517598 /* ViewDefault.swift in Sources */,
 				A4FEA29F2A41D41C00517598 /* LoginCoordinator.swift in Sources */,
 				A4FEA2AB2A41DDD600517598 /* ImageDefault.swift in Sources */,
 				A4FEA2BA2A41E6D700517598 /* RegisterViewController.swift in Sources */,

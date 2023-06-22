@@ -15,6 +15,7 @@ class RegisterViewController: ViewControllerDefault {
     //MARK: -  Clouseres
     var onLoginTap: (() -> Void)?
     
+    
     lazy var registerView: RegisterView = {
         let registerView = RegisterView()
          registerView.onLoginTap = {
@@ -29,6 +30,7 @@ class RegisterViewController: ViewControllerDefault {
            self.view = registerView
        }
        
+    
        override func viewDidLoad() {
            super.viewDidLoad()
         self.title = "Registrar"

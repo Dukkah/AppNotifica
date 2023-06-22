@@ -8,32 +8,30 @@
 import Foundation
 import UIKit
 
-class LoginView: UIView {
-    //MARK: - Initialize
-        override init(frame: CGRect) {
-            
-            super.init(frame: frame)
-            
-            self.backgroundColor = .viewBackGroundColor
-            setupVisualElements()
-            
-        }
+class LoginView: ViewDefault {
+    
     
   //MARK: -  Clouseres
   var onRegisterTap: (() -> Void)?
   var onLoginTap: (() -> Void)?
     
-    
+   
     var imageLogin = ImageDefault(image: "ImageLogin")
        
    
     var imageLabel = LabelDefault(text: "Registre e gerencie as ocorrências do seu IF", font: UIFont.systemFont(ofSize: 17, weight: .regular))
     
     
-    var emailTextField = TextFieldDefault (placeholder: "E-mail")
+    var emailTextField = TextFieldDefault (placeholder: "E-mail", keyBordType: .emailAddress, returnKeyType: .next)
     
     
-    var senhaTextField = TextFieldDefault (placeholder: "Senha")
+    var senhaTextField : TextFieldDefault  = {
+        let text = TextFieldDefault(placeholder: "Senha", keyBordType: .emailAddress, returnKeyType: .done)
+        
+        text.isSecureTextEntry = true;
+        
+        return text
+         }()
     
     
     var buttonLogar = ButtonDefault(botao: "LOGAR")
@@ -42,7 +40,10 @@ class LoginView: UIView {
     var buttonRegistrar = ButtonDefault(botao: "REGISTRAR")
         
     
-    func setupVisualElements() {
+    override func setupVisualElements() {
+        super.setupVisualElements()
+        emailTextField.delegate = self
+        senhaTextField.delegate = self
         self.addSubview(imageLogin)
         self.addSubview(imageLabel)
         self.addSubview(emailTextField)
@@ -94,10 +95,6 @@ class LoginView: UIView {
         
         ])
     }
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     //MARK: - Actions
     @objc
     private func registerTap(){
@@ -107,5 +104,24 @@ class LoginView: UIView {
     @objc
     private func loginTap(){
         onLoginTap?()
+    }
+}
+
+
+extension LoginView: UITextFieldDelegate {
+  
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+       
+        
+        if textField == emailTextField {
+            
+            self.senhaTextField.becomeFirstResponder()
+        } else {
+            
+            textField.resignFirstResponder()
+        }
+        
+        return true
     }
 }
