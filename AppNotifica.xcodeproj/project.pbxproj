@@ -29,6 +29,10 @@
 		A4FEA2B42A41E5DC00517598 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FEA2B32A41E5DC00517598 /* RegisterView.swift */; };
 		A4FEA2B82A41E61D00517598 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FEA2B72A41E61D00517598 /* RegisterCoordinator.swift */; };
 		A4FEA2BA2A41E6D700517598 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FEA2B92A41E6D700517598 /* RegisterViewController.swift */; };
+		A4FEA2BD2A447B6400517598 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FEA2BC2A447B6400517598 /* HomeView.swift */; };
+		A4FEA2BF2A447B8200517598 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FEA2BE2A447B8200517598 /* HomeViewController.swift */; };
+		A4FEA2C12A447BCA00517598 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FEA2C02A447BCA00517598 /* HomeCoordinator.swift */; };
+		A4FEA2C32A447E6100517598 /* ViewControllerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FEA2C22A447E6100517598 /* ViewControllerDefault.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +79,10 @@
 		A4FEA2B32A41E5DC00517598 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		A4FEA2B72A41E61D00517598 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
 		A4FEA2B92A41E6D700517598 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A4FEA2BC2A447B6400517598 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A4FEA2BE2A447B8200517598 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A4FEA2C02A447BCA00517598 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		A4FEA2C22A447E6100517598 /* ViewControllerDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDefault.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +185,7 @@
 		A4FEA2962A41D38B00517598 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A4FEA2BB2A447B3200517598 /* Home */,
 				A4FEA2B22A41E57300517598 /* Register */,
 				A4FEA2B12A41E56C00517598 /* Login */,
 			);
@@ -189,6 +198,7 @@
 				A4FEA29C2A41D40800517598 /* Coordinator.swift */,
 				A4FEA29E2A41D41C00517598 /* LoginCoordinator.swift */,
 				A4FEA2B72A41E61D00517598 /* RegisterCoordinator.swift */,
+				A4FEA2C02A447BCA00517598 /* HomeCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -208,6 +218,7 @@
 				A4FEA2AA2A41DDD600517598 /* ImageDefault.swift */,
 				A4FEA2AC2A41DDE300517598 /* LabelDefault.swift */,
 				A4FEA2AF2A41DE0700517598 /* TextFieldDefault.swift */,
+				A4FEA2C22A447E6100517598 /* ViewControllerDefault.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -228,6 +239,15 @@
 				A4FEA2B92A41E6D700517598 /* RegisterViewController.swift */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		A4FEA2BB2A447B3200517598 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A4FEA2BC2A447B6400517598 /* HomeView.swift */,
+				A4FEA2BE2A447B8200517598 /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,9 +383,11 @@
 			files = (
 				A4FEA29B2A41D3C700517598 /* LoginViewController.swift in Sources */,
 				41239E8F28F840EA00D92C31 /* ViewController.swift in Sources */,
+				A4FEA2C32A447E6100517598 /* ViewControllerDefault.swift in Sources */,
 				A4FEA2AD2A41DDE300517598 /* LabelDefault.swift in Sources */,
 				A4FEA2B42A41E5DC00517598 /* RegisterView.swift in Sources */,
 				A4FEA2B02A41DE0700517598 /* TextFieldDefault.swift in Sources */,
+				A4FEA2BF2A447B8200517598 /* HomeViewController.swift in Sources */,
 				41239E8B28F840EA00D92C31 /* AppDelegate.swift in Sources */,
 				41239E9528F840EB00D92C31 /* AppNotifica.xcdatamodeld in Sources */,
 				A4FEA2992A41D3B800517598 /* LoginView.swift in Sources */,
@@ -375,8 +397,10 @@
 				A4FEA2BA2A41E6D700517598 /* RegisterViewController.swift in Sources */,
 				A4FEA2A92A41DDC500517598 /* ButtonDefault.swift in Sources */,
 				A4FEA2B82A41E61D00517598 /* RegisterCoordinator.swift in Sources */,
+				A4FEA2BD2A447B6400517598 /* HomeView.swift in Sources */,
 				A4FEA29D2A41D40800517598 /* Coordinator.swift in Sources */,
 				A4FEA2A72A41DD7500517598 /* UIColor+.swift in Sources */,
+				A4FEA2C12A447BCA00517598 /* HomeCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

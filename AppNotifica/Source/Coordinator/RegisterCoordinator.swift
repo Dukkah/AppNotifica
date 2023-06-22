@@ -12,6 +12,7 @@ import Foundation
 import UIKit
 class RegisterCoordinator: Coordinator {
     
+   
     var navigationController: UINavigationController
     
     init (navigationController: UINavigationController ) {
@@ -31,7 +32,8 @@ class RegisterCoordinator: Coordinator {
     }
     
     func  gotoLogin() {
-       let coordinator = LoginCoordinator(navigationController: navigationController)
-        coordinator.start()
+        
+        
+        self.navigationController.popViewController(animated: true)
     }
 }

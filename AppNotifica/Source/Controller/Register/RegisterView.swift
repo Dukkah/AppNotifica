@@ -11,15 +11,13 @@ import UIKit
 class RegisterView: UIView {
     //MARK: - Initialize
         override init(frame: CGRect) {
-          
             super.init(frame: frame)
-      
             self.backgroundColor = .viewBackGroundColor
             setupVisualElements()
             
         }
     
-    //MARK: - Initialize
+    //MARK: - Clouseres
     var onLoginTap: (()->Void)?
      
     var imageLabel = LabelDefault(text: "Entre com seu email e sua senha para se registrar", font: UIFont.systemFont(ofSize: 27, weight: .regular))

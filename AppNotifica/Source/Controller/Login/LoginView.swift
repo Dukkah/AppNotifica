@@ -11,7 +11,7 @@ import UIKit
 class LoginView: UIView {
     //MARK: - Initialize
         override init(frame: CGRect) {
-           
+            
             super.init(frame: frame)
             
             self.backgroundColor = .viewBackGroundColor
@@ -21,17 +21,24 @@ class LoginView: UIView {
     
   //MARK: -  Clouseres
   var onRegisterTap: (() -> Void)?
+  var onLoginTap: (() -> Void)?
+    
     
     var imageLogin = ImageDefault(image: "ImageLogin")
        
+   
     var imageLabel = LabelDefault(text: "Registre e gerencie as ocorrências do seu IF", font: UIFont.systemFont(ofSize: 17, weight: .regular))
+    
     
     var emailTextField = TextFieldDefault (placeholder: "E-mail")
     
+    
     var senhaTextField = TextFieldDefault (placeholder: "Senha")
     
+    
     var buttonLogar = ButtonDefault(botao: "LOGAR")
-  
+    
+    
     var buttonRegistrar = ButtonDefault(botao: "REGISTRAR")
         
     
@@ -44,6 +51,8 @@ class LoginView: UIView {
         self.addSubview(buttonRegistrar)
         
         buttonRegistrar.addTarget(self, action: #selector(registerTap), for: .touchUpInside)
+        
+        buttonLogar.addTarget(self, action: #selector(loginTap), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
         
@@ -93,5 +102,10 @@ class LoginView: UIView {
     @objc
     private func registerTap(){
         onRegisterTap?()
+    }
+    
+    @objc
+    private func loginTap(){
+        onLoginTap?()
     }
 }
