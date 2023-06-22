@@ -1,5 +1,5 @@
 //
-//  HomeCoordinator.swift
+//  NovaOcorrenciaCoordinator.swift
 //  AppNotifica
 //
 //  Created by IFBIOTIC14 on 22/06/23.
@@ -8,15 +8,16 @@
 import Foundation
 
 import UIKit
-class HomeCoordinator: Coordinator {
+
+class NovaOcorrenciaCoordinator: Coordinator {
     
     private let navigationController: UINavigationController
     
-    lazy var homeViewController: HomeViewController = {
-        let viewController = HomeViewController()
+    lazy var novaOcorrenciaViewController: NovaOcorrenciaViewController = {
+        let viewController = NovaOcorrenciaViewController()
         
-        viewController.tabBarItem.title = "Home"
-        viewController.tabBarItem.image = UIImage(systemName: "homekit")
+        viewController.tabBarItem.title = "Novo"
+        viewController.tabBarItem.image = UIImage(systemName: "note.text.badge.plus")
         return viewController
     }()
     
@@ -27,4 +28,4 @@ class HomeCoordinator: Coordinator {
     func start() {
         
     }
-    }
+}

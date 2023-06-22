@@ -9,8 +9,9 @@ import Foundation
 import UIKit
 class LoginCoordinator: Coordinator {
     
-  
+    
     var navigationController: UINavigationController
+    
     
     init (navigationController: UINavigationController ) {
             self.navigationController = navigationController
@@ -18,6 +19,7 @@ class LoginCoordinator: Coordinator {
         }
 
       func start() {
+    
      let viewController = LoginViewController()
           self.navigationController.pushViewController(viewController, animated: true)
           
@@ -31,12 +33,14 @@ class LoginCoordinator: Coordinator {
           }
     }
     
+    
     func  gotoRegister() {
         let coordinator = RegisterCoordinator(navigationController: navigationController)
         coordinator.start()
     }
+        
         func  gotoLogin() {
-           let coordinator = HomeCoordinator(navigationController: navigationController)
+           let coordinator = TabbarCoordinator(navigationController: navigationController)
             coordinator.start()
         }
 }
