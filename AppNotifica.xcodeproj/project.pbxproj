@@ -42,6 +42,7 @@
 		A4FEA2D42A4490C600517598 /* SobreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FEA2D32A4490C600517598 /* SobreCoordinator.swift */; };
 		A4FEA2D62A4490F300517598 /* NovaOcorrenciaCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FEA2D52A4490F300517598 /* NovaOcorrenciaCoordinator.swift */; };
 		A4FEA2D82A44910C00517598 /* TabbarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FEA2D72A44910C00517598 /* TabbarCoordinator.swift */; };
+		A4FEA2DA2A49B81700517598 /* EscolherImagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FEA2D92A49B81700517598 /* EscolherImagem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		A4FEA2D32A4490C600517598 /* SobreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SobreCoordinator.swift; sourceTree = "<group>"; };
 		A4FEA2D52A4490F300517598 /* NovaOcorrenciaCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaOcorrenciaCoordinator.swift; sourceTree = "<group>"; };
 		A4FEA2D72A44910C00517598 /* TabbarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarCoordinator.swift; sourceTree = "<group>"; };
+		A4FEA2D92A49B81700517598 /* EscolherImagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscolherImagem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,6 +299,7 @@
 			children = (
 				A4FEA2CD2A448E4600517598 /* NovaOcorrenciaViewController.swift */,
 				A4FEA2CF2A448E7000517598 /* NovaOcorrenciaView.swift */,
+				A4FEA2D92A49B81700517598 /* EscolherImagem.swift */,
 			);
 			path = NovaOcorrencia;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				A4FEA2C92A448D6500517598 /* TabbarController.swift in Sources */,
 				A4FEA2C32A447E6100517598 /* ViewControllerDefault.swift in Sources */,
 				A4FEA2D82A44910C00517598 /* TabbarCoordinator.swift in Sources */,
+				A4FEA2DA2A49B81700517598 /* EscolherImagem.swift in Sources */,
 				A4FEA2D42A4490C600517598 /* SobreCoordinator.swift in Sources */,
 				A4FEA2AD2A41DDE300517598 /* LabelDefault.swift in Sources */,
 				A4FEA2B42A41E5DC00517598 /* RegisterView.swift in Sources */,
